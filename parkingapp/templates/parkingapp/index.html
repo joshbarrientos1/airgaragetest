@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    {% load mathfilters %}
+
     <h1>Hello World</h1>
     <form method="POST">
         <div class="form-group">
@@ -25,7 +27,10 @@
           <p class="card-text">Address: {{item.location.address1}} {{item.location.city}}, {{item.location.state}}, {{item.location.zip_code}} {{item.location.country}}</p>
           <p class="card-text">Rating: {{item.rating}}</p>
           <p class="card-text">Review Count: {{item.review_count}}</p>
+          {% with count=item.review_count|add:1 %}
+          <p class="card-text">Score: {{item.review_count|mul:item.rating|div:count}}</p>
           <a href="{{item.url}}" class="btn btn-primary" target="_blank">Check Them Out!</a>
+          {% endwith %}
         </div>
     </div>
     <div><br/><br/></div>
