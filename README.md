@@ -18,3 +18,8 @@ Create a directory for the repo to be store using ```mkdir```. Go into the new d
 Finally, run the server using ```python manage.py runserver```
 
 Let me know if you have any other questions.
+
+Some minor warnings before "grading"
+- Please ignore awkward jokes, somewhow even being alone and recording I was still nervous
+- Please do not judge me based off my desktop, I like batman
+- And Time became a little long so front end suffered a little.
